@@ -33,7 +33,12 @@ class HomeController extends Controller
     {
         return view('transaksi');
     }
+    public function profile()
+    {
+        return view('profile');
+    }
     public function uploadImage(Request $request){
+
         $image_file = $request->image;
         list($type, $image_file) = explode(';', $image_file);
         list(, $image_file)      = explode(',', $image_file);
@@ -41,6 +46,8 @@ class HomeController extends Controller
         $image_name= time().'_'.rand(100,999).'.png';
         $path = public_path('img/'.$image_name);
         file_put_contents($path, $image_file);
+
         return $image_name;
     }
+
 }

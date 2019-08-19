@@ -11,22 +11,38 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('online.produk');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')->group(function () {
 
-Route::get('/admin/produk', 'HomeController@produk');
-Route::get('/admin/transaksi', 'HomeController@transaksi');
+    Route::get('/produk', 'HomeController@produk');
+    Route::get('/transaksi', 'HomeController@transaksi');
+    Route::get('/profile', 'HomeController@profile');
+    Route::post('/upload-image', 'HomeController@uploadImage');
 
-Route::post('/upload-image', 'homeController@uploadImage');
+});
 
-// API
-// Produk
+// API WEB Auth
 Route::middleware('auth')->prefix('web')->group(function () {
 
     include "route.php";
 
+});
+
+
+
+// API Public Online Not Authorization
+Route::prefix('public')->group(function () {
+
+    Route::prefix('produk')->group(function () {
+        // get Produk All
+        Route::get('/','produkOnlineController@index');
+
+        // get Produk by ID
+        Route::get('/{id}','produkOnlineController@single');
+    
+    });
 });

@@ -1,28 +1,4 @@
 @extends('layouts.app')
-@section('css-after')
-    <style>
-        .login{
-            background-image: url(login.png);
-            background-size: cover;
-            height: 450px;
-            box-shadow: 0 5px 20px 1px #ccc;
-            border-radius: 10px;
-            margin-top: 120px;
-        }
-        .login:hover{
-            margin-top: 80px;
-            transition: .5s;
-            box-shadow: 0 20px 35px #1c5c9c;
-        }
-        .btn-login{
-            padding:8px 30px; border-radius:30px
-        }
-        .form-login{
-            border-radius: 30px;
-            padding: 16px 20px;
-        }
-    </style>
-@endsection
 
 @section('content')
 

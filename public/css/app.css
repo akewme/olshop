@@ -1,1 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
+.navmenu {
+    position: fixed;
+    left: 15px;
+    z-index: 100;
+    width: 100px;
+    bottom: 30%
+}
+
+.navmenu a {
+    width: 100%;
+    float: left;
+    padding: 10px 12px;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 2px;
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    color: #06a7bb
+}
+
+.navmenu a:hover,
+.navmenu .active {
+    text-decoration: none;
+    color: #076a76;
+    animation: jello 1s;
+}
+
+.navmenu a i {
+    font-size: 20px;
+}
+
+.bg-img {
+    background-size: cover;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: .1;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media (max-width:600px) {
+    .navmenu {
+        background: #fff
+    }
+
+    .navmenu a {
+        width: 25%;
+        padding: 16px 0;
+    }
+
+    .navmenu a span {
+        display: none
+    }
+
+    .navmenu {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .btn-logout {
+        display: none
+    }
+}
+
+.datepicker {
+    z-index: 1151;
+}
+
+a {
+    color: #262A2D
+}
+
+.produk {
+    color: black;
+    transition: .5s;
+    border-radius: 30px;
+    background: #fff;
+    /* cursor: pointer; */
+    animation: bounceIn 1s;
+    font-size: 12px
+}
+
+.produk:hover {
+    box-shadow: 2px 10px 20px #ccc;
+    transform: translateY(-10px);
+    transition: .5s;
+}
+
+.btn-circle {
+    border-radius: 30px;
+}
+
+.btn-topleft {
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+}
+
+.btn-edit {
+    background: #fff;
+    color: #06a7bb;
+}
+
+.produk:hover .btn-edit {
+    animation: tada 1s;
+    transition: 1s;
+}
+
+.login {
+    background-image: url(login.png);
+    background-size: cover;
+    height: 550px;
+    box-shadow: 0 5px 20px 1px #ccc;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.login:hover {
+    margin-top: 40px;
+    transition: .5s;
+    box-shadow: 0 20px 35px #1c5c9c;
+}
+
+.btn-login {
+    padding: 8px 30px;
+    border-radius: 30px
+}
+
+.form-login {
+    border-radius: 30px;
+    padding: 16px 20px;
+}

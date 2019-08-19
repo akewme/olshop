@@ -7,7 +7,7 @@
             height: 550px;
             box-shadow: 0 5px 20px 1px #ccc;
             border-radius: 10px;
-            margin-top: 80px;
+            margin-top: 50px;
         }
         .login:hover{
             margin-top: 40px;
@@ -35,10 +35,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-12 col-form-label text-md-left">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-12 col-form-label text-md-left">Nama Brand</label>
 
                             <div class="col-md-5">
-                                <input placeholder="Ari Bahtiar" id="name" type="text" class="form-control form-login  @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input placeholder="Nama Brand" id="name" type="text" class="form-control form-login  @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">

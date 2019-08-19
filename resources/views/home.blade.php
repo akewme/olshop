@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Olshop</div>
+                <a href="/" class="card-header">Olshop</a>
 
                 <div class="card-body">
                     @if (session('status'))
